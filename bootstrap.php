@@ -31,6 +31,8 @@
 	require_once __DIR__ . "\\core\\interfaces\\IObservable.php";
 	/** @noinspection PhpIncludeInspection */
 	require_once __DIR__ . "\\core\\interfaces\\IObserver.php";
+	/** @noinspection PhpIncludeInspection */
+	require_once __DIR__ . "\\core\\classes\\DB.class.php";
 
 	// services loader
 	/** @noinspection PhpIncludeInspection */

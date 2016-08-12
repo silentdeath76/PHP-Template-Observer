@@ -1,16 +1,5 @@
 <?php
-	global $pdo;
-
 	require "bootstrap.php";
-
-	$pdo_set = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
-
-	$hostname = "localhost";
-	$username = "root";
-	$password = "";
-	$database = "test";
-
-	$pdo = new PDO( sprintf( "mysql:host=%s;dbname=%s", $hostname, $database ), $username, $password, $pdo_set );
 
 	/* @var Login $login */
 	$app = appLoader( "login" );

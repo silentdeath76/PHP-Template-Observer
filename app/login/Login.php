@@ -73,14 +73,13 @@
 
 
 		public function validate () {
-			global $pdo;
 			if ( is_null( $this->username ) or is_null( $this->password ) ) {
 				$this->fireEvent( self::USER_NOT_LOGIN );
 
 				return;
 			}
 
-			$stmt = $pdo->prepare( "SELECT * FROM `users` WHERE username = ?" );
+			$stmt = DB::getInstance()->pdo->prepare( "SELECT * FROM `users` WHERE username = ?" );
 			$stmt->execute( [$this->username] );
 
 			if ( ( $row = $stmt->fetch() ) != null ) {
