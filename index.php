@@ -3,7 +3,7 @@
 
 	/* @var Login $login */
 	$app = appLoader( "login" );
-
+	DB::getInstance("localhost", "root", null, "test"); // create first connect for - pattern Singleton
 
 	$login = new $app( "test", "5f4dcc3b5aa765d61d8327deb882cf99", "127.0.0.1" );
 	$login->addObserver( new SuccessAuth(), $login::USER_AUTH );
